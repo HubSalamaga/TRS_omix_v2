@@ -100,7 +100,8 @@ optional arguments:
   --taxids_file TAXIDS_FILE
                         Path to the file containing the taxids that should be
                         added to exceptions
-
+```
+```
 ```
 
 ## ToDo's:
