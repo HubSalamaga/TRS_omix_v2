@@ -41,6 +41,39 @@ The content of the repository is derived from its predecessor, available at:
 > 2. **Use -h with various scripts to see which arguments are optional and which are required for execution as well as descriptions of arugments**
 
 ```
+usage: TRS_part.py [-h] --input_fasta_folder_path INPUT_FASTA_FOLDER_PATH
+                   --tmin TMIN --tmax TMAX --mode MODE [--redo] [--cont]
+                   --email EMAIL --threshold THRESHOLD --length_to_extract
+                   LENGTH_TO_EXTRACT [--cd_hit_path CD_HIT_PATH]
+
+This program extracts TRS sequences from a series of input genomes, allows for
+length selection of extracted fragments, and prepares sequences for further
+analysis.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input_fasta_folder_path INPUT_FASTA_FOLDER_PATH
+                        Path to a folder containing genomes in fasta format
+                        from which TRS sequences will be extracted
+  --tmin TMIN           Minimum length of TRS sequences
+  --tmax TMAX           Maximum length of TRS sequences
+  --mode MODE           Mode of operation, must be 0 or 1
+  --redo                Redo the analysis if results directory already exists
+  --cont                Continue the analysis from saved TRS results file
+  --email EMAIL         Address e-mail to be used for connection with NCBI
+                        databases
+  --threshold THRESHOLD
+                        Identity threshold for clustering using cdhit has to
+                        be between 0.8 and 1.0
+  --length_to_extract LENGTH_TO_EXTRACT
+                        Length of flanking sequences to be extracted from the
+                        full TRS sequence
+  --cd_hit_path CD_HIT_PATH
+                        Path to the cd-hit-est executable
+
+```
+
+```
 usage: Blast_part.py [-h] --blast_output_path BLAST_OUTPUT_PATH --taxonomy_db
                      TAXONOMY_DB --email EMAIL
                      [--ids_to_add_to_dictionary IDS_TO_ADD_TO_DICTIONARY | --ids_file IDS_FILE]
