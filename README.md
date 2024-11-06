@@ -40,6 +40,36 @@ The content of the repository is derived from its predecessor, available at:
 >
 > 2. **Use -h with various scripts to see which arguments are optional and which are required for execution as well as descriptions of arugments**
 
+```
+usage: Blast_part.py [-h] --blast_output_path BLAST_OUTPUT_PATH --taxonomy_db
+                     TAXONOMY_DB --email EMAIL
+                     [--ids_to_add_to_dictionary IDS_TO_ADD_TO_DICTIONARY | --ids_file IDS_FILE]
+                     [--taxids_to_add_to_exceptions TAXIDS_TO_ADD_TO_EXCEPTIONS | --taxids_file TAXIDS_FILE]
+
+This program analyzes the blast output files to find species specific
+sequences coming from genomes analyzed in the previous step
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --blast_output_path BLAST_OUTPUT_PATH
+                        Path to a folder containing blast results in a valid
+                        format
+  --taxonomy_db TAXONOMY_DB
+                        Path to the taxonomy - accession database
+  --email EMAIL         Addres email to be used for connection with NCBI
+                        servers
+  --ids_to_add_to_dictionary IDS_TO_ADD_TO_DICTIONARY
+                        Comma separated list or single value of NCBI IDs
+  --ids_file IDS_FILE   Path to the file containing NCBI IDs
+  --taxids_to_add_to_exceptions TAXIDS_TO_ADD_TO_EXCEPTIONS
+                        Comma separated list or single taxid to add to
+                        filtering exceptions
+  --taxids_file TAXIDS_FILE
+                        Path to the file containing the taxids that should be
+                        added to exceptions
+
+```
+
 ## ToDo's:
 
 ### Simple Tasks
